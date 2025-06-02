@@ -1,10 +1,11 @@
-#include <iostream>
-#include "menu.h"
+#include <iostream>     //bibliotheque de vocab de codage additionelle
+#include "menu.h"       //appel a program second (declutter de text)
+#include "log.h"        //appel a program de recherche de log et de mot clef spe et de les reecrire
 using namespace std;
 
-int main ()             
+int main ()             //creation de la fonction primaire du program
 {
-    int choix = 0;      
+    int choix = 0;      //creation de variable appeler "choix"
 
     while (choix !=3)
     {
@@ -15,11 +16,11 @@ int main ()
         switch (choix)
         {
             case 1:
-                cout << "Vous avez choisi : Afficher les logs sudo" << endl;
+                sudoLog();
                 break;
 
             case 2:
-                cout << "Vous avez choisi :Afficher les logs SSH" << endl;
+                sshLog() ;
                 break;
 
             case 3:
@@ -34,3 +35,4 @@ int main ()
 
     return 0;
 }
+
